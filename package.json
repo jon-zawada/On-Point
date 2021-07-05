@@ -9,7 +9,9 @@
     "react-dev": "webpack --watch --mode development",
     "build": "webpack --mode production",
     "pm2": "pm2 start server",
-    "stop": "pm2 stop server"
+    "stop": "pm2 stop server",
+    "seed": "mysql -u root -p < db/schema.sql",
+    "login": "mysql -u root -p"
   },
   "repository": {
     "type": "git",
@@ -42,11 +44,14 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "moment": "^2.29.1",
+    "mysql": "^2.18.1",
     "pm2": "^5.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router": "^5.2.0"
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
   }
 }

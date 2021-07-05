@@ -1,17 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Header from './Header';
+import Rubric from './Rubric';
 
 function App() {
   return (
     <div>
-      <h2>Welcome to Point Manager!</h2>
+      {/* <Header /> */}
+      <Rubric />
     </div>
   );
 }
 
 export default App;
-
-
 
 /*
  <Router>

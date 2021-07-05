@@ -1,0 +1,12 @@
+DROP DATABASE IF EXISTS Points;
+
+CREATE DATABASE Points;
+
+USE Points;
+
+CREATE TABLE rubric(
+  id INT NOT NULL AUTO_INCREMENT,
+  pointtype VARCHAR(800),
+  pointworth INT NOT NULL,
+  PRIMARY KEY(id)
+);
