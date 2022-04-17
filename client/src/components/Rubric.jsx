@@ -5,7 +5,7 @@ const Rubric = () => {
   const [rubric, setRubric] = useState([]);
   // const [something, setSomething]
   useEffect(() => {
-    axios.get('/rubric')
+    axios.get('/api/rubric')
       .then((res) => {
         setRubric(res.data);
       });

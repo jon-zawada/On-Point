@@ -1,13 +1,14 @@
 import React from 'react';
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import Rubric from './Rubric';
+import Navbar from './Navbar';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      {/* <Header /> */}
-      <Rubric />
+    <div className="app-wrapper">
+      <Navbar />
+      <Header />
     </div>
   );
 }
@@ -27,3 +28,14 @@ export default App;
         </div>
       </Router>
 */
+
+
+// <Router>
+    //   <div>
+    //     {/* <Header /> */}
+    //     {/* <Switch>
+    //       <Route />
+    //     </Switch> */}
+    //     <Route path="/rubric" exact component={Rubric} />
+    //   </div>
+    // </Router>
