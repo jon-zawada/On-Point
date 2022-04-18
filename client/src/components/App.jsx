@@ -3,39 +3,21 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import Rubric from './Rubric';
 import Navbar from './Navbar';
+import UserDetail from './UserDetail';
 
-const App = () => {
-  return (
-    <div className="app-wrapper">
+const App = () => (
+  <div className="app-wrapper">
+    <Router>
       <Navbar />
-      <Header />
-    </div>
-  );
-}
+      <div className="content-wrapper">
+        <Switch>
+          <Route path="/" exact component={UserDetail} />
+          {/* <Route path="/home" exact component={Header} /> */}
+          <Route path="/rubric" exact component={Rubric} />
+        </Switch>
+      </div>
+    </Router>
+  </div>
+);
 
 export default App;
-
-/*
- <Router>
-        <div>
-          <Header changeHover={this.changeHover} hover={hover} />
-          <Switch>
-            <Route path="/" exact render={() => <About changeHover={this.changeHover} />} />
-            <Route path="/about" component={() => <About changeHover={this.changeHover} />} />
-            <Route path="/projects" exact component={Projects} />
-            <Route path="/projects/:id" component={ProjectInfo} />
-          </Switch>
-        </div>
-      </Router>
-*/
-
-
-// <Router>
-    //   <div>
-    //     {/* <Header /> */}
-    //     {/* <Switch>
-    //       <Route />
-    //     </Switch> */}
-    //     <Route path="/rubric" exact component={Rubric} />
-    //   </div>
-    // </Router>

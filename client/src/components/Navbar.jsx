@@ -2,19 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const tabs = [
-  { name: 'Home', path: 'home' },
-  { name: 'Rubrik', path: 'rubrik' },
-  { name: 'Add', path: 'add' },
-  { name: 'Rewards', path: 'rewards' },
+  { name: 'Home', path: '/', key: 1 },
+  { name: 'Rubric', path: '/rubric', key: 2 },
+  { name: 'Add', path: '/add', key: 3 },
+  { name: 'Rewards', path: '/rewards', key: 4 },
 ];
 
 const Navbar = () => (
   <div className="nav-bar">
     <ul>
       {tabs.map((tab) => (
-        <li>
-          <Link to={`/${tab.path}`}>{tab.name}</Link>
-        </li>
+        <Link to={tab.path}>
+          <li key={tab.key}>{tab.name}</li>
+        </Link>
       ))}
     </ul>
   </div>

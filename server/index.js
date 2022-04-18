@@ -12,6 +12,9 @@ app.use(express.static(DIST_DIR));
 
 app.get('/api/rubric', Controller.getRubric);
 // get rewards
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(DIST_DIR, 'index.html'));
+});
 
 app.listen(PORT, () => {
   console.log(`Example app listening at ${PORT}`);

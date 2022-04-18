@@ -7,6 +7,7 @@ const Rubric = () => {
   useEffect(() => {
     axios.get('/api/rubric')
       .then((res) => {
+        console.log(res);
         setRubric(res.data);
       });
   }, []);
