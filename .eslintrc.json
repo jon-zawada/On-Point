@@ -19,6 +19,7 @@
         "react"
     ],
     "rules": {
-        "comma-dangle": 0
+        "comma-dangle": 0,
+        "react/button-has-type": 0
     }
 }

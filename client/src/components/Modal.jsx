@@ -4,6 +4,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/button-has-type */
 import React, { useState } from 'react';
+import Rubric from './Rubric';
 
 const Modal = ({ openLabel }) => {
   const [modal, setModal] = useState(false);
@@ -19,10 +20,9 @@ const Modal = ({ openLabel }) => {
       <div className="modal">
         <div className="overlay" onClick={toggleModal} />
         <div className="modal-content">
-          <h2>hello modal</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad iure, reprehenderit nam aliquam ab delectus ea quas qui maiores assumenda aut soluta vero, ipsam tempora doloremque, esse officiis sequi corporis.
-          </p>
+          <div className="modal-content-2">
+            <Rubric />
+          </div>
           <button className="close-modal" onClick={toggleModal}>close</button>
         </div>
       </div>

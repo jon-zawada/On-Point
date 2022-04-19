@@ -12,21 +12,13 @@ const Rubric = () => {
       });
   }, []);
   return (
-    <div>
-      <table>
-        <tbody>
-          <tr>
-            <th>Things</th>
-            <th>Rubric</th>
-          </tr>
-          {rubric.map((thing) => (
-            <tr key={thing.id}>
-              <td>{thing.pointtype}</td>
-              <td>{thing.pointworth}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className='rubric'>
+      {rubric.map((thing) => (
+        <div key={thing.id}>
+          <span>{thing.pointtype}</span>
+          <span>{thing.pointworth}</span>
+        </div>
+      ))}
     </div>
   );
 };
